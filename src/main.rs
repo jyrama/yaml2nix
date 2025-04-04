@@ -7,7 +7,9 @@ fn main() {
     let mut document = String::new();
     file.read_to_string(&mut document).unwrap();
 
-    print!("{}", convert_doc(document))
+    let converted = convert_doc(document);
+    let (_, formatted) = alejandra::format::in_memory(file_name.to_string(), converted);
+    print!("{}", formatted);
 }
 
 fn convert_doc(document: String) -> String {
