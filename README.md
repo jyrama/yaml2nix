@@ -1,5 +1,7 @@
 # yaml2nix
 
+A fork of https://github.com/euank/yaml2nix.
+
 yaml2nix is a command line tool to convert yaml into a nix expression.
 
 ## Usage
